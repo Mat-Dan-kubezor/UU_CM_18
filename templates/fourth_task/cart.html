@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-{% extends "menu.html" %}
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Cart</title>
-    </head>
-    <body>
-        {%block pagename%}
-            <h1>{{title}}</h1>
-        {%endblock%}
-        
-        {%block menu%}
-            {{block.super}}
-        {%endblock%}
-        {%block content%}
-        <h2>Извините, ваша корзина пуста</h2>
-        <button><a href="/platform">{{back}}</a></button>
-        {%endblock%}    
-    </body>
-</html>
+{% extends "fourth_task/menu.html" %}
+
+{% block title %} Мир игр - {{ block.super }}{% endblock%}
+
+{% block pagename %}
+    <h1>Корзина</h1>
+{% endblock %}
+
+{% include "menu.html" %}
+
+{% block content %}
+    <h2>Извините, ваша корзина пуста</h2>
+    <h3>Мы рады, что вы выбрали нас!</h3>
+{% endblock %}

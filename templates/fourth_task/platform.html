@@ -1,22 +1,14 @@
+{% extends "fourth_task/menu.html" %}
 
-<!DOCTYPE html>
-{% extends "menu.html" %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-   <title>Main Page</title>
-</head>
-<body>
-    {%block pagename%}
-        <h1>{{title}}</h1>
-    {%endblock%}
-        
-    {%block menu%}
-        {{block.super}}
-    {%endblock%}
-    {%block content%}
-        {{block.super}}
-    {%endblock%}
+{% block title %} Мир игр - {{ block.super }}{% endblock%}
 
-</body>
-</html>
+{% block pagename %}
+    <h1>Главная</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
